@@ -1,0 +1,123 @@
+
+    
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCUMENTATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>example_file</h1>
+    </header>
+    <h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    get_start_frame</strong></span>
+    <sub><span style="color: #808080;">()</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+     Get the start frame of the playback.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;None</p>
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; int The frame number of the start frame of the playback or - 1 if there
+        is no start frame</p>
+<p>&nbsp;&nbsp;</p><h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    get_end_frame</strong></span>
+    <sub><span style="color: #808080;">()</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+     Get the end frame of the playback.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;None</p>
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; int number of frames that have been played before the end of the
+         current frame</p>
+<p>&nbsp;&nbsp;</p><h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    get_character</strong></span>
+    <sub><span style="color: #808080;">(character_name)</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+    Get the character.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;character_name</strong> : The name of the character</p>
+        
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; The character.</p>
+<p>&nbsp;&nbsp;</p><h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    get_controllers</strong></span>
+    <sub><span style="color: #808080;">(character)</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+     Get all controllers connected to character.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;character</strong> : The character to check. Can be DAG or nurbs</p>
+        
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; A list of objects</p>
+<p>&nbsp;&nbsp;</p><h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    get_attributes</strong></span>
+    <sub><span style="color: #808080;">(controller)</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+     Get attributes of a controller.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;controller</strong> : Name of the controller to get attributes of</p>
+        
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Dictionary of attributes or empty dictionary if there are no attributes
+        in the controller. Attributes are returned as key - value pairs</p>
+<p>&nbsp;&nbsp;</p><h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    build_data</strong></span>
+    <sub><span style="color: #808080;">(character, frames)</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+     Builds and returns data to be sent to the character.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;character</strong> : Character to build data for</p>
+        
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;frames</strong> : The frames to export. If not specified, exports all the</p>
+        
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Dictionary with frames and controller attributes for the character.
+        The key is frame and the value is a dictionary with controller</p>
+<p>&nbsp;&nbsp;</p><h3>&nbsp;<span style="color: #3366ff;"><strong><em><span style="color: #ffcc00;">def</span></em>
+    main</strong></span>
+    <sub><span style="color: #808080;">(delivery_directory, animation_file, character_name, frames)</span></sub></h3>
+    <p>&nbsp; &nbsp; <em>
+     Create and write data to delivery_directory.</em></p>
+<p>&nbsp;<strong>&nbsp; &nbsp; PARAMETERS</strong></p>
+
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;delivery_directory</strong> : Directory where we are going to store the data.</p>
+        
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;animation_file</strong> : Name of the animation file that will be used to create</p>
+        
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;character_name</strong> : Name of the character for which we are going to create</p>
+        
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;frames</strong> : The frames to export. If not specified, exports all the</p>
+        
+<p>&nbsp;<strong>&nbsp; &nbsp; RETURNS</strong></p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; None</p>
+<p>&nbsp;&nbsp;</p>
+<footer>
+        <p>Generated by Tristan Giandoriggios's "doc_to_web"</p>
+    </footer>
+</body>
+</html>
