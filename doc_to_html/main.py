@@ -148,7 +148,7 @@ def build_context(node: str) -> dict:
 
      Returns:
         Dictionary with information about the node's type ( str ) description
-        ( str ) args_def ( list ) returns_def ( list
+        ( str ) args_def ( list ) returns_def ( list )
     """
     global DOCSTRINGS
 
